@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const ChatroomSchema = Schema({
   roomId: Number,
-  users: [String],
+  users: [{ username: String, dateTaken: String }],
   messages: [{ sender: String, content: String, timestamp: String }]
 });
 
